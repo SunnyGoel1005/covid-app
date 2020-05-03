@@ -1,0 +1,12 @@
+
+
+Deployment Url : https://sunnygoel1005.github.io
+
+Github Deployed(host) Code Link - https://github.com/SunnyGoel1005/sunnygoel1005.github.io
+Github Application Code Link - https://github.com/SunnyGoel1005/covid-app
+
+
+# For Admin login
+
+username : admin
+password : admin
