@@ -1,0 +1,79 @@
+
+<div class="container" style="padding-top: 30px" >
+  <div class="row">
+    <div class="col col-md-4" >
+        <div class="card mb-3" style="height: 200px">
+            <i class='fab fa-searchengin align-center' style='font-size:48px;color:darkblue'></i>
+          <div class="align-center  "><h1>Total Cases</h1></div>
+          <div class="card-body">
+            <h3 class="card-title align-center" style="color:#aaa">{{totalCases}}</h3>
+          </div>
+        </div>
+    </div>
+    <div class="col col-md-4">
+        <div class="card mb-3" style="height: 200px">
+          <i class='fas fa-heartbeat align-center' style='font-size:48px;color:red'></i>
+          <div class="align-center"><h1>Deaths</h1></div>
+          <div class="card-body">
+            <h3 class="card-title align-center" style="color:red ">{{deaths}}</h3>
+          </div>
+        </div>
+    </div>
+    <div class="col col-md-4">
+        <div class="card  mb-3" style="height: 200px" >
+            <i class="fas fa-hand-holding-heart  align-center" style="font-size:48px;color:#8ACA2B "></i>
+          <div class="align-center"><h1>Recovered</h1></div>
+          <div class="card-body">
+            <h3 class="card-title align-center" style="color:#8ACA2B ">{{recovered}}</h3>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+   
+  <div class="container" style="padding-top: 50px">
+  <table mdbTable hover="true" class="table table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th *ngFor="let head of stateHeadElements" scope="col" style="text-align: center">{{head}}</th>
+      </tr>
+    </thead>
+    <tbody mdbTableCol *ngFor="let state of stateData" >
+      <tr  data-toggle="collapse" [attr.data-target]="'#' + state.statecode" style="cursor: pointer">
+        <th scope="row" class="table-primary" style="width: 10px;text-align: center">{{state.state}}</th>
+        <td style="width: 10px;text-align: center">{{state.active}}</td>
+        <td style="width: 10px;text-align: center">{{state.confirmed}}</td>
+        <td style="width: 10px;text-align: center">{{state.deaths}}</td>
+        <td style="width: 10px;text-align: center">{{state.recovered}}</td>
+      </tr>
+      <tr >
+        <td colspan="6" class="hiddenRow" >
+          <div class="accordion-body collapse" id="{{state.statecode}}">
+              <table style="width: 98%" class="rounded border border-dark">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th *ngFor="let head of stateHeadElements" scope="col" style="text-align: center">{{head}}</th>
+                    </tr>
+                  </thead>
+                  <tbody >
+                  
+                    <tr  *ngFor="let district of state.districtData">
+                      <th scope="row" class="table-info bg-light" style="width: 10px;text-align: center">{{district.name}}</th>
+                      <td style="width: 10px;text-align: center">{{district.info.active}}</td>
+                      <td style="width: 10px;text-align: center">{{district.info.confirmed}}</td>
+                      <td style="width: 10px;text-align: center">{{district.info.deceased}}</td>
+                      <td style="width: 10px;text-align: center">{{district.info.recovered}}</td>
+                    </tr>
+                   
+
+                  </tbody>
+                </table>
+          </div>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  </div>
+

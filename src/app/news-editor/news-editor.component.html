@@ -1,0 +1,36 @@
+<!-- Default form contact -->
+
+<div class="container page text-center border border-light  p-5">
+  <div class="row ">
+    <div class="col-md-9 offset-md-2 col-xs-12">
+      <div class="alert alert-success" *ngIf = "addNewsSuccess" id="addNewsMessage">
+        <strong>Success!</strong> News Added Successfully.
+      </div>
+      <form [formGroup]="newsForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5">
+
+          <p class="h2 mb-4">Add News</p>
+          <input type="text" class="form-control mt-4 form-control-lg" placeholder="Title" formControlName="title" [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+          <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+              <div *ngIf="f.title.errors.required">Title is required</div>
+          </div>
+
+          <input type="text" class="form-control mt-4 form-control-lg" placeholder="Description" formControlName="description" [ngClass]="{ 'is-invalid': submitted && f.description.errors }">
+          <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+              <div *ngIf="f.description.errors.required">Description is required</div>
+          </div>
+
+          <div class="form-group">
+              <textarea class="form-control rounded-0 mt-4 form-control-lg" rows="2" placeholder="Summary" formControlName="summary"></textarea>
+          </div>
+          <div class="form-group">
+              <textarea class="form-control rounded-0 form-control-lg" rows="3" placeholder="Message" formControlName="message" [ngClass]="{ 'is-invalid': submitted && f.message.errors }"></textarea>
+              <div *ngIf="submitted && f.message.errors" class="invalid-feedback">
+                  <div *ngIf="f.message.errors.required">Message is required</div>
+              </div>
+          </div>
+         
+          <button class="btn btn-info btn-block form-control-lg" [disabled]="loading">Add</button>
+      </form>
+    </div>
+  </div>
+</div>

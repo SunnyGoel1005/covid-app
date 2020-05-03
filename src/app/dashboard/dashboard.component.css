@@ -1,0 +1,98 @@
+
+      .number-table {
+          font-size: 20px;
+          font-weight: bold
+      }
+  
+      .number-table-main {
+          font-size: 24px;
+          font-weight: bold
+      }
+      .align-center{
+        text-align : center;
+      }
+
+      .maincounter-number{
+        font-size: 50px;
+      }
+  
+      .source { }
+  
+      .style2 {
+          color: #FF0000
+      }
+  
+      .style4 {
+          color: #FF0000;
+          font-weight: bold;
+      }
+  
+      .style6 {
+          font-size: 12px;
+          color: #bbb;
+          font-weight: bold;
+      }
+  
+      .source1 {
+          font-size: 12px;
+          color: #bbb;
+      }
+  
+      .source1 {
+          font-size: 12px;
+          color: #bbb;
+      }
+  
+      .source11 {
+          font-size: 12px;
+          color: #bbb;
+      }    .source111 {
+         
+      } .source1111 {
+          font-size: 12px;
+          color: #bbb;
+      }
+      
+
+      
+    * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      /* Float four columns side by side */
+      .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+      }
+      
+      /* Remove extra left and right margins, due to padding */
+      .row {margin: 0 -5px; padding-top: 20px;}
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* Responsive columns */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+      
+      /* Style the counter cards */
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+       
+      }
+  

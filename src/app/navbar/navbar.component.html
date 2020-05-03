@@ -1,0 +1,37 @@
+
+  
+  <div class="label-counter text-white" id="page-top" style="background-color:rgb(85, 121, 238)">
+      <div style="align-self: center">
+       <h1 style="text-align: center; font-size: 70px ;font-family: Impact, Charcoal, sans-serif; text-shadow: 1px 1px 0 black, 
+       2px 2px 0 black; margin: 0px">  Coronavirus  &nbsp;&nbsp;<i class="fas fa-viruses" style='font-size: 70px;color:red; font-stretch: ultra-expanded;'></i></h1>
+       <p style="text-align: center; font-size: 30px; text-shadow: 1px 1px 0 black, 
+       2px 2px 0 black;">Pandemic  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; </p>
+       </div>
+      </div>
+    <nav class="navbar navbar-expand-lg text-white" style="background-color: crimson; ">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav" >
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link text-white" routerLink="/dashboard">DashBoard <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/news">Latest News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/precautions">Precautions</a>
+          </li>
+          <li class="nav-item" *ngIf="!isLoggedIn">
+              <a class="nav-link text-white" routerLink="/login" >Login</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+              <a class="nav-link text-white" (click)="logout()" style="cursor: pointer">Logout</a>
+          </li>
+          <li class="nav-item" *ngIf="isLoggedIn">
+              <a class="nav-link text-white" routerLink="/addNews">Add News</a>
+          </li>
+        </ul>
+      </div>
+    </nav>

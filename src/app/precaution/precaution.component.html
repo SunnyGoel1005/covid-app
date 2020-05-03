@@ -1,0 +1,27 @@
+
+<div class="container" >
+  <div class="row" *ngFor="let precaution of precautionList">
+    <div class="col col-md-4">
+    
+    <div class="card img-fluid bg-warning" style="width:500px">
+      <img class="card-img-top" src="{{precaution.imageUrl}}" alt="Card image" height="250px" >
+      <div class="card-img-overlay"> 
+    
+    </div>
+            </div>
+        </div>
+        <div class="col col-md-8">
+            <div class="card bg-gradient-success" style="height:285px">
+              <h4 class="card-title card-title h3 mb-2 text-left">{{precaution.heading}}</h4>
+                
+              <ul *ngFor="let con of precaution.content">
+                <li>{{con}}</li>
+              </ul>
+            </div>
+           
+        </div>
+    </div>
+    
+</div>
+  
+  

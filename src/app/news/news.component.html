@@ -1,0 +1,24 @@
+<div class="container page text-center border border-light p-5">
+<div class="row">
+  <div class="col-md-12 col-lg-12 order-lg-2 order-xl-1">
+      <div class="card">
+          <div class="card-body">
+              <h2 class="header-title mt-2 bg-light text-black ">Latest News</h2>
+              <div class="table-responsive">
+                  <table class="table table-centered table-nowrap table-hover mb-0">
+                      <tbody>
+                          <tr *ngFor="let news of newsList">
+                              <td>
+                                  <h3 class="font-14 my-1 font-weight-norma p-3 mb-2 bg-info text-white">{{news.title}}</h3>
+                                  <h5 class="text-muted font-13">{{news.description}}</h5>
+                                  <p class="bg-light">{{news.message}}</p>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
